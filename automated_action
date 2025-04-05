@@ -1,7 +1,7 @@
 if record.vat:
-  contact = env ['res.partner'].search([['vat', '=','record.vat']])
+    contact = env['res.partner'].search([['vat', '=',record.vat]])
   
-if contact:
-    for c in contact: 
-      if c.id != record.id:
-        raise warning('La identificación debe ser unica. por favor digite un ID diferente ')
+    if contact:
+        for c in contact: 
+                if c.id != record.id:
+                     raise Warning('La identificación debe ser unica. por favor digite un ID diferente ')
